@@ -1,0 +1,1 @@
+{"worker_id": "DELL:817141", "pid": 817141, "device": "cpu", "cuda_available": false, "cuda_device": null, "torch_threads": 10, "loaded_models": ["human_pose", "human_tracking", "activity_pose_temporal"], "current_job": null, "updated_at": 1794403751.3629417}

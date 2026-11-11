@@ -1,0 +1,29 @@
+# Backend dependencies (tested with Python 3.12 on Ubuntu, CPU only).
+#
+# PyTorch: install it FIRST with the right wheel for your machine (see README):
+#   CPU only:     pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   NVIDIA CUDA:  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# Otherwise `ultralytics` pulls the default (large, CUDA-enabled) torch build from PyPI.
+
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+SQLAlchemy>=2.0,<3
+alembic>=1.13
+pydantic>=2.7,<3
+pydantic-settings>=2.3
+
+# Pinned minor version: the tracking plugin calls Ultralytics' internal BYTETracker API
+# (see app/vision/plugins/human_tracking/bytetrack_adapter.py and its test).
+ultralytics>=8.4.200,<8.5      # YOLO11-pose + ByteTrack
+lap>=0.5                       # linear assignment used by ByteTrack
+transformers>=4.45,<6          # X-CLIP zero-shot activity model
+huggingface_hub>=0.25
+safetensors>=0.4
+opencv-python-headless>=4.9
+numpy>=1.26
+imageio-ffmpeg>=0.5            # bundled FFmpeg binary (no system ffmpeg needed)
+
+# Development / tests
+pytest>=8
+httpx>=0.27

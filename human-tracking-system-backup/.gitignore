@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+backend/.env
+
+# Local data (videos, results, database, weights)
+backend/uploads/*
+backend/processed/*
+backend/tmp/*
+backend/database/*
+backend/models/*
+!backend/uploads/.gitkeep
+!backend/processed/.gitkeep
+!backend/tmp/.gitkeep
+!backend/database/.gitkeep
+!backend/models/.gitkeep
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
